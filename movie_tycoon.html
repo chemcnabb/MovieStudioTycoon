@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2016 by chemcnabb (http://jsbin.com/lijuwa/33/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <script src="js/genres.js"></script>
+    <script src="js/movietycoon.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Movie tycoon</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style id="jsbin-css">
+    </style>
+</head>
+<body>
+<div class="container">
+    <div id="main_ui" class="card">
+
+        <div class="row">
+            <div class="col s5">&nbsp;</div>
+            <div id="project" class="col s2">
+                <h5 class="valign center-align" id="current-company-name">No Conpany</h5>
+                <h6 class="valign center-align" id="current-project">No Project</h6>
+            </div>
+            <div class="col s5">&nbsp;</div>
+        </div>
+        <div class="row">
+            <div class="col s2"><span class="valign center-align" id="current-date">Y:<span id="current-year"></span> M:<span id="current-month"></span> D:<span id="current-day"></span></span></div>
+            <div class="col s8">&nbsp;</div>
+            <div id="money" class="col s2">
+                <span class="valign center-align" id="current-fans">fans: <span id="fan-count"></span>
+              </span>
+            </div>
+
+        </div>
+    </div>
+    <div id="make-company" class="card medium">
+        <div class="card-image" style="height:75px">
+            <span class="card-title" style="color:black">Start Your Production Company</span>
+        </div>
+        <div class="divider"></div>
+        <div class="container">
+            <div class="input-field col s6">
+                <input id="company-name" type="text" class="validate" value="Balls Deep">
+                <label for="company-name">Company Name</label>
+            </div>
+            <div class="input-field col s6">
+                <input id="owner-name" type="text" class="validate" value="Johnny Balls">
+                <label for="owner-name">Owner Name</label>
+            </div>
+
+
+        </div>
+        <div class="card-action">
+            <a href="#" id="start_company" class="right">Start Company</a>
+            <a href="#" class="left">Cancel</a>
+        </div>
+    </div>
+
+    <div id="pre_production" class="card large">
+        <div class="card-image" style="height:75px">
+            <span class="card-title" style="color:black">Make a movie</span>
+        </div>
+        <div class="divider"></div>
+        <div class="container">
+            <div class="input-field col s6">
+                <input id="movie_title" type="text" class="validate">
+                <label for="movie_title">Movie Title</label>
+            </div>
+
+            <h6>Budget</h6>
+            <ul id="movie_budget" class="movie_options">
+                <li><input name="budget" type="radio" id="sm_budget"/>
+                    <label for="sm_budget">Small</label></li>
+                <li><input name="budget" type="radio" id="md_budget"/>
+                    <label for="md_budget">Medium</label></li>
+                <li><input name="budget" type="radio" id="lg_budget"/>
+                    <label for="lg_budget">Large</label></li>
+                <li><input name="budget" type="radio" id="aaa_budget"/>
+                    <label for="aaa_budget">AAA</label></li>
+            </ul>
+            <h6>Audience</h6>
+            <ul id="movie_audience" class="movie_options">
+                <li><input name="audience" type="radio" id="y_audience"/>
+                    <label for="y_audience">Family</label></li>
+                <li><input name="audience" type="radio" id="e_audience"/>
+                    <label for="e_audience">PG</label></li>
+                <li><input name="audience" type="radio" id="a_audience"/>
+                    <label for="a_audience">AA</label></li>
+                <li><input name="audience" type="radio" id="r_audience"/>
+                    <label for="r_audience">R</label></li>
+            </ul>
+            <h6>Genre Mix</h6>
+            <input type="hidden" name="genre1" id="valgenre1"/>
+            <input type="hidden" name="genre2" id="valgenre2"/>
+
+            <div class="genre_wrapper">
+                <!-- Dropdown Trigger -->
+                <a class='dropdown-button btn' id="genre1_btn" href='#' data-activates='genre1'>Genre 1</a>
+                <!-- Dropdown Structure -->
+                <ul id='genre1' class='dropdown-content'></ul>
+            </div>
+            <div class="genre_wrapper">
+                <!-- Dropdown Trigger -->
+                <a class='dropdown-button btn' id="genre2_btn" href='#' data-activates='genre2'>Genre 2</a>
+                <!-- Dropdown Structure -->
+                <ul id='genre2' class='dropdown-content'></ul>
+            </div>
+            <p></p>
+            <h6>Platform</h6>
+            <ul id="movie_platform" class="movie_options">
+                <li><input name="platform" type="radio" id="tv_platform"/>
+                    <label for="tv_platform">TV</label></li>
+                <li><input name="platform" type="radio" id="film_platform"/>
+                    <label for="film_platform">Film</label></li>
+            </ul>
+        </div>
+        <div class="card-action">
+            <a href="#" id="start_prepro" class="right">Make Movie</a>
+            <a href="#" class="left">Cancel</a>
+        </div>
+    </div>
+
+    <div id="production" class="card valign">
+        <div class="background"></div>
+        <div class="middleground"></div>
+        <div class="foreground"></div>
+        <div class="film-title"></div>
+    </div>
+
+
+
+</div>
+
+</body>
+</html>

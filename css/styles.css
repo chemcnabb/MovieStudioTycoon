@@ -1,0 +1,41 @@
+ul.movie_options li{
+    display:inline-block;
+
+}
+
+ul.movie_options li:not(:first-child) {
+    margin-left:10px;
+}
+ #pre_production{
+     display:none;
+
+ }
+.dropdown-button{
+    min-width:123px;
+}
+ .genre_wrapper{
+     display:inline-block;
+ }
+
+ #production{
+     width:320px;
+     height:240px;
+     display:none;
+     border:1px solid black;
+     margin:20px auto;
+ }
+
+ .foreground, .middleground, .background{
+     display:block;
+     position:absolute;
+     width:320px;
+     height:240px;
+ }
+
+ #main_ui{
+     border:1px solid black;
+ }
+
+ #money{
+     border:1px solid blue;
+ }
