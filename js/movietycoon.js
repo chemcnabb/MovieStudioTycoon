@@ -55,6 +55,7 @@ var Game = {
                         //console.log(game_data["production_company"]["company_name"]);
                         $("#current-company-name")[0].innerHTML = game_data["production_company"]["company_name"] + " Productions";
                         Game.isPaused = false;
+                        Game.light.start();
                     })
                 }
 
